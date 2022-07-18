@@ -1,0 +1,145 @@
+<!PDDE Template>
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+		<!-- Product name as page title -->
+		<title>%UNITY_WEB_NAME%</title>
+
+		<!-- Page Styling -->
+		<style type="text/css">
+		
+		contentParent
+		{
+			margin:0;
+			height: 100%;
+			background: red;
+		}	
+		body
+		{
+			margin:0;
+			height: 100%;
+			background: #242424;
+		}	
+		
+		#gameContainer
+		{
+			align: center;
+			width: 100vw;
+			height: 85vh;
+		}
+
+		canvas
+		{
+			display: block;
+			width: 100%;
+			height: 100%;			
+			/*background: #242424;*/
+
+		}
+
+		.pre-loader
+		{
+			display: flex;
+			position: absolute;
+			top:0;left: 0;
+			width: 80vw;
+			height: 70vh;
+			flex-direction: column;
+			spacing: 20px;
+			align-items: center;
+			justify-content: center;
+			color: #ff7901;
+			display: none;			
+		}		
+
+		.pre-loader .title
+		{
+			color: #ff7901;
+			letter-spacing: 0.1em;
+		}
+
+      	.progress-bar
+      	{
+      		width: 500px;      		      		
+      		padding: 5px;
+      		background: #242424;
+      		border-radius: 12px;
+      	}
+
+      	.progress-bar .fill
+      	{
+      		background: #ff7901;
+      		height: 5px;
+      		border-radius: 12px;
+      		color: #ff7901;
+      		text-align: center;     
+      		line-height: 5px; 		
+      		overflow: hidden;      		
+      	}
+
+		</style>
+	</head>	
+	
+	<body>
+
+		<!-- The webgl canvas will be loaded inside gameContainer -->
+		<div id="gameContainer"></div>
+
+		<div class="contentParent">
+			<div class="pre-loader">	
+				<img align="middle" src="/Data/logo.png" height="500px"/>		
+				<!-- <h3 class="title">LOADING...</h3> -->	
+				<div class="progress-bar">
+					<div class="fill" style="width:20%;">10%</div>
+				</div>
+
+			</div>
+		</div>
+
+	</body>
+
+	<!-- UnityLoader.js is enqueued here -->
+	<!-- <script src="%UNITY_WEBGL_LOADER_URL%"></script>
+
+	<script type="text/javascript">
+	var gameInstance = UnityLoader.instantiate("gameContainer", "%UNITY_WEBGL_BUILD_URL%", {onProgress: function(gameInstance, progress)
+	{
+
+		if (!gameInstance.Module)
+			return;
+
+		//Get the preloader element
+		const preLoader = document.querySelector(".pre-loader");
+		//Get the progressbar fill element
+		const progressBar = preLoader.querySelector(".progress-bar .fill");	
+
+		if (!gameInstance.progress) 
+		{    
+			//Show the progress fill
+			preLoader.style.display = "flex";
+			//Assign to use the progress bar fill
+			gameInstance.progress = progressBar;
+		}
+
+		//Update the fill element width by progress
+		gameInstance.progress.textContent =gameInstance.progress.style.width =(100 * progress) + "%";
+
+		//If unity finished loading
+		if (progress === 1 && !gameInstance.removeTimeout) 
+		{
+			//Hide the preloader with a delay
+			gameInstance.removeTimeout = setTimeout(function() 
+			{
+				//Hide the preloader
+				preLoader.style.display = "none"
+
+			}, 500);
+		}
+
+	}});
+  	</script> -->
+
+</html>
