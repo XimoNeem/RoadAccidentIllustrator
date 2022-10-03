@@ -2047,7 +2047,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8362881425475222146}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76302af87ddc5b844a547953960e9039, type: 3}
+  m_Script: {fileID: 11500000, guid: 61cf5576e8808a24eb569a2d805431b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   selected: 0
@@ -2055,6 +2055,7 @@ MonoBehaviour:
   allowedToMove: 1
   allowedToRotate: 1
   allowedToEdit: 1
+  allowedToDelete: 1
   previewImage: {fileID: 0}
   previewZoom: 0
   previewVerticalOffset: 0
@@ -2072,19 +2073,17 @@ MonoBehaviour:
     light: 0
     farLight: 0
     specialLight: 0
-  LeftTurn: {fileID: 9064602800694740697}
-  RightTurn: {fileID: 7924686230884668367}
-  ForwardLight: {fileID: 4939461516292411327}
-  FarForwardLight: {fileID: 3551569267231270517}
-  StopLight: {fileID: 3590427305817687022}
-  corpusColor: {r: 1, g: 1, b: 1, a: 1}
-  corpus: {fileID: 7796439079143593888}
-  stopLights:
-  - {fileID: 2806975804619278347}
-  lights:
-  - {fileID: 7728514898730765400}
-  defaultShader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  lightShader: {fileID: 4800000, guid: 31bfda934c27bd54a96d5f3f1ae1d398, type: 3}
+  LeftTurn: {fileID: 0}
+  RightTurn: {fileID: 0}
+  ForwardLight: {fileID: 0}
+  FarForwardLight: {fileID: 0}
+  StopLight: {fileID: 0}
+  corpusColor: {r: 0, g: 0, b: 0, a: 0}
+  corpus: {fileID: 0}
+  stopLights: []
+  lights: []
+  defaultShader: {fileID: 0}
+  lightShader: {fileID: 0}
 --- !u!65 &-38341363413050150
 BoxCollider:
   m_ObjectHideFlags: 0
